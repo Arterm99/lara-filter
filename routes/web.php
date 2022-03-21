@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// My
+use Illuminate\Support\Facades\App;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if (App::environment(['local', 'staging'])) {
+        echo "The environment is either local OR staging...";
+    }
+    
     return view('welcome');
 });
