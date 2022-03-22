@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-// My
-use Illuminate\Support\Facades\App;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +14,11 @@ use Illuminate\Support\Facades\App;
 */
 
 Route::get('/', function () {
-    if (App::environment(['local', 'staging'])) {
-        echo "The environment is either local OR staging...";
-    }
-    
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
