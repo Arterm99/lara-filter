@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+// My project
+use Illuminate\Support\Facades\Cache;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +26,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+// My project
+
+Route::get('/cache', function () {
+    return Cache::get('key');
+});
