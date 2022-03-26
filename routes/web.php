@@ -33,3 +33,9 @@ require __DIR__.'/auth.php';
 Route::get('/cache', function () {
     return Cache::get('key');
 });
+
+// My project2
+
+Route::get('/cache', function () {
+    return Cache::get('key');
+});
