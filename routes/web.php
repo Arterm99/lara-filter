@@ -39,3 +39,9 @@ Route::get('/cache', function () {
 Route::get('/cache', function () {
     return Cache::get('key');
 });
+
+// My project3
+
+Route::get('/cache', function () {
+    return Cache::get('key');
+});
