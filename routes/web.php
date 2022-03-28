@@ -34,14 +34,6 @@ Route::get('/cache', function () {
     return Cache::get('key');
 });
 
-// My project2
-
-Route::get('/cache', function () {
-    return Cache::get('key');
-});
-
-// My project3
-
-Route::get('/cache', function () {
-    return Cache::get('key');
-});
+Route::get('/', function () {
+    return view('head');
+})->name('home');
