@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanelController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,3 +38,9 @@ Route::get('/cache', function () {
 Route::get('/', function () {
     return view('head');
 })->name('home');
+
+// Добавление товаров в БД
+Route::post('/regprod', 'AdminPanelController@admin');
+
+// Добавление товаров в БД
+Route::get('/regprod', 'AdminPanelController@admin');
