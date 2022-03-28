@@ -1,0 +1,74 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap components here
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+
+
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+    $utilities,
+    (
+      "colorrr": (
+        property: cursor,
+        class: colorrr,
+        responsive: true,
+        values: (
+            0 : red,
+        ),
+      )
+    )
+  );
+  
+
+
+
+body {
+    background: black !important;
+  }
+  a .nav-link {
+        color: #e70000 !important;
+  }
+  span.colorrr-red {
+    color: red;
+   }
+
+$primary: #ffcc00;
+$secondary: #dd2222;
+$nav-link-color : green;
+$link-color : green;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+  "nav-link-color": $nav-link-color
+   "link-color": $link-color
+);
+
+// Create your own map
+$custom-colors: (
+  "custom-color": #900
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+/* simply assign the value */ 
+$body-bg: #eeeeee;
+
+/* use a variable to override primary */
+$theme-colors: (
+  primary: $purple
+);
+
+
+@import "bootstrap";
