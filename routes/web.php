@@ -36,11 +36,8 @@ Route::get('/cache', function () {
 });
 
 Route::get('/', function () {
-    return view('head');
+    return view('product');
 })->name('home');
 
 // Добавление товаров в БД
-Route::post('/regprod', 'AdminPanelController@admin');
-
-// Добавление товаров в БД
-Route::get('/regprod', 'AdminPanelController@admin');
+Route::match(['get', 'post'], '/regprod', [AdminPanelController::class, 'admin']);
