@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('admin_panels', function (Blueprint $table) {
             $table->id();
 
-                $table->string('name')->nullable(); 
-                $table->string('price');  
-                $table->string('weght');
-                $table->text('description');
-                $table->string('profile_image');
+                $table->string('product')->nullable();
+                $table->string('category')->nullable();
+                $table->string('name')->nullable();
+                $table->string('price')->nullable();  
+                $table->string('weght')->nullable();
+                $table->text('description')->nullable();
+                $table->string('profile_image')->nullable();
             
             $table->timestamps();
         });

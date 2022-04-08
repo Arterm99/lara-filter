@@ -23,11 +23,23 @@ class AdminRequests extends FormRequest  {
     public function rules()  {
         return [
 
+            'product' => '',
+            'category' => '',
+            'name' => '',
+            'weght' => '',
+            'price' => '',
+            'description' => '',
+            'profile_image' => '',
+
+            /*
+            'product' => 'required',
+            'category' => 'required',
             'name' => 'required|min:1|max:50',
             'weght' => 'required|min:1|max:200',
             'price' => 'required',
-            'description' => 'required|min:10|max:200',
+            'description' => 'required|min:1|max:200',
             'profile_image' => 'required|mimes:png,jpg,jpeg|max:2048',
+            */
         ];
     }
 

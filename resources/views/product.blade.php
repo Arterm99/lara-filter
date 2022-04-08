@@ -13,11 +13,13 @@
                 <select class="form-select mb-2" autofocus required name="product">
                 <option selected disabled>Выберите товар</option>
                     <option value="Бытовой кондиционер">Бытовой кондиционер</option>
+                    <option value="Полупромышленный кондиционер">Полупромышленный кондиционер</option>
                 </select>
 
                 <select class="form-select form-select-sm mb-5" required name="category">
                 <option selected disabled >Выберите категорию</option>
                     <option value="zspr-s">ZSPR-S</option>
+                    <option value="zspr-s">ZS-S</option>
                 </select>
 
 				<div class="form-floating">
@@ -56,10 +58,6 @@
 
     </form>
 </div>
-
-
-<hr>
-
 
 <!-- Конец кода -->
 @endsection
