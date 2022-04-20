@@ -9,14 +9,16 @@
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/css/custum.scss">
 	<link rel="stylesheet" href="/css/custum.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
 
 </head>
 
 <body>
 
     <div class="container">
-        <span class="colorrr-red"> qwerty </span>
+        <span class="absolute mt-4 bg-indigo-50"> qwerty </span>
                 <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
                 <a href="{{ route('home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
@@ -27,7 +29,7 @@
                     <li class="nav-item"><a href="{{ route('home') }}" class="nav-link active" aria-current="page">Главная</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Профиль</a></li>
                     <li class="nav-item"><a href="{{ route('show') }}" class="nav-link">Витрина</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Команда</a></li>      
+                    <li class="nav-item"><a href="#" class="nav-link">Команда</a></li>
 
                     <div style="display: flex; background: aliceblue;">
                         @if (Route::has('login'))
@@ -40,7 +42,7 @@
                                     <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Зарегестрироваться</a></li>
                                     @endif
                                 @endauth
-                        @endif  
+                        @endif
                     </div>
                 </ul>
         </header>
@@ -49,9 +51,12 @@
 
     @yield('content')
 
-    
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=" {{ asset('js/app.js') }}"></script>
 </body>
+
+<!-- footer -->
     <div class="container">
         <footer class="row row-cols-5 py-5 my-5 border-top">
             <div class="col">

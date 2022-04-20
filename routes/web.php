@@ -32,7 +32,7 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('product');
 })->middleware('throttle:6,1')->name('home');
-    
+
 
 
 Route::get('/test', function () {
@@ -65,7 +65,7 @@ Route::delete('/household/wall-mounted/{id}/delete', [AdminPanelController::clas
 
 
 
-/*    
+/*
 
 Route::prefix('images') -> group( function () {
     Route::get('/teh', function () {
@@ -80,7 +80,7 @@ Route::prefix('images') -> group( function () {
 Route::controller(OrderController::class)->group(function () {
     Route::get('/orders/{id}', 'show');
     Route::post('/orders', 'store');
-}); 
+});
 
 
 Route::fallback(function () {

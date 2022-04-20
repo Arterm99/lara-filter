@@ -19,12 +19,24 @@ return new class extends Migration
                 $table->string('product')->nullable();
                 $table->string('category')->nullable();
                 $table->string('name')->nullable();
-                $table->string('price')->nullable();  
-                $table->string('weght')->nullable();
+                $table->string('price')->nullable();
+                $table->string('weight')->nullable();
                 $table->text('description')->nullable();
                 $table->string('profile_image')->nullable();
-            
+
             $table->timestamps();
+
+            // "Мягкое удаление"
+            $table->softDeletes();
+
+            // Отношение "Один ко многим"
+            $table->unsignedBigInteger('category_id')->nullable();
+            // index - для ускоренной сортировки, фильтрации по ключу
+            $table->index('category_id', 'post_category_idx');
+
+            // on - на какую таблицу ссылаться, references - на какую колонку
+            $table->foreign('category_id', 'post_category_fk')->references('id')->on('categories');
+            //  $table->foreignId('category_id')->constrained();
         });
     }
 

@@ -31,7 +31,7 @@
                     <label for="floatingInput">Цена</label>
                 </div>
                 <div class="form-floating">
-                    <input class="form-control" placeholder="Вес товара" type="text" name="weght" >
+                    <input class="form-control" placeholder="Вес товара" type="text" name="weight" >
                     <label for="floatingInput">Вес товара</label>
                 </div>
 
@@ -42,7 +42,7 @@
 
 
 <!-- Кнопки  -->
-        
+
             <div class="row row-cols-auto">
                 <div class="col">
                     <input class="form-control" type="file" name="profile_image">
